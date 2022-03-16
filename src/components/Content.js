@@ -69,6 +69,7 @@ function Content(props) {
 
         console.log(data);
       });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   const handleSubmit = () => {
     fetch("https://random-data-api.com/api/company/random_company")
