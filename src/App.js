@@ -1,23 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import Container from "./components/Container";
+import { Square } from "./components/Square";
+import "./App.css";
+
+// const URL = "https://random-data-api.com/api/company/random_company";
+// const data = fetch(URL);
+
+// const data = [
+//   { id: 1, name: "Marco" },
+//   { id: 2, name: "Lincoln" },
+//   { id: 3, name: "Aya" },
+// ];
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Square>
+        <Container />
+      </Square>
     </div>
   );
 }
