@@ -1,0 +1,51 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,200&family=Playfair+Display&family=Rubik:wght@300&display=swap");
+
+.login-form {
+  margin-bottom: 32px;
+}
+
+.login-button {
+  padding: 16px;
+  margin: 40px;
+  border: none;
+  border-radius: 4 4px 4px 4;
+  cursor: pointer;
+  outline: none;
+  background: linear-gradient(
+    90deg,
+    rgba(93, 12, 255, 1) 0%,
+    rgba(155, 0, 250, 1) 100%
+  );
+  color: #fff;
+  text-transform: capitalize;
+  margin-left: 50px;
+  margin-top: 30px;
+  font-size: large;
+}
+.login-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  width: 428px;
+  min-height: 460px;
+  background: #161a2b;
+  text-align: center;
+  margin: 128px auto;
+  border-radius: 10px;
+  padding-bottom: 32px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+.username-input {
+  padding: 14px 32px 14px 16px;
+  border-radius: 4px 0 0 4px;
+  border: 2px solid #5d0cff;
+  outline: none;
+  width: 320px;
+  background: transparent;
+  color: #fff;
+}
+p {
+  margin: 32px 0;
+  color: #fff;
+  font-size: 20px;
+}

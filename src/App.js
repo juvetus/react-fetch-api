@@ -1,22 +1,23 @@
-import Container from "./components/Container";
-import { Square } from "./components/Square";
 import "./App.css";
-
-// const URL = "https://random-data-api.com/api/company/random_company";
-// const data = fetch(URL);
-
-// const data = [
-//   { id: 1, name: "Marco" },
-//   { id: 2, name: "Lincoln" },
-//   { id: 3, name: "Aya" },
-// ];
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Login from "./components/Login/Login";
+import useToken from "./components/UseToken";
+import Dashboad from "./components/Dashboad";
 
 function App() {
+  const { token, setToken } = useToken();
+
+  if (!token) {
+    return <Login setToken={setToken} />;
+  }
   return (
-    <div>
-      <Square>
-        <Container />
-      </Square>
+    <div className="wrapper">
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Dashboad />} />
+          <Route path="/dashboard" element={<Dashboad />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }

@@ -4,8 +4,6 @@ import { DarkModeContext } from "./Square";
 import Lightswitch from "./Lightswitch";
 import CustomScroll from "react-custom-scroll";
 
-import "./Square.css";
-
 function Container() {
   const { darkMode } = useContext(DarkModeContext);
 
@@ -17,7 +15,6 @@ function Container() {
     >
       <CustomScroll>
         <Content />
-
         <Lightswitch />
       </CustomScroll>
     </div>
