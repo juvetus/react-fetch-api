@@ -5,7 +5,7 @@ import Lightswitch from "./Lightswitch";
 
 function Content(props) {
   const { darkMode } = useContext(DarkModeContext);
-  const [id, setId] = useState([]);
+  const [id, setId] = useState("");
   // const [favorites, setFavorites] = useState([]);
   const [logo, setLogo] = useState("");
   const [duns_number, setDunsNumber] = useState("");
@@ -96,7 +96,7 @@ function Content(props) {
     if (darkMode) {
       return (
         <div>
-          <div className="navbar">Random company App</div>
+          <div className="navbar">Random Company App</div>
           <div className="random">
             <Form.Button onClick={handleSubmit} content="random"></Form.Button>
 
@@ -123,10 +123,7 @@ function Content(props) {
             <h1>{error}</h1>
           ) : (
             <div className="app-card">
-              <Card
-                value={business_name}
-                onChange={(e) => setBusiness(e.target.value)}
-              >
+              <Card value={id} onChange={(e) => setId(e.target.value)}>
                 <Image src={logo} className="ui fluid image" />
 
                 <Card.Content>
@@ -205,7 +202,7 @@ function Content(props) {
     }
     return (
       <div>
-        <div className="navbar">Random company App</div>
+        <div className="navbar">Random Company App</div>
         <div className="random">
           <Form.Button onClick={handleSubmit} content="random"></Form.Button>
 
@@ -232,10 +229,7 @@ function Content(props) {
           <h1>{error}</h1>
         ) : (
           <div className="app-card">
-            <Card
-              value={business_name}
-              onChange={(e) => setBusiness(e.target.value)}
-            >
+            <Card value={id} onChange={(e) => setId(e.target.value)}>
               <Image src={logo} className="ui fluid image" />
               <Card.Content>
                 <Card.Header>{business_name}</Card.Header>
