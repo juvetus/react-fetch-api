@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
 import "./Login.css";
+
+import logo from "../assets/th.jpg";
+
 async function LoginUser(credentials) {
   return fetch("https://server-api-react.herokuapp.com/login", {
     method: "POST",
@@ -25,8 +28,10 @@ function Login({ setToken }) {
   };
   return (
     <div className="login-wrapper">
-      <h1>Please Log In</h1>
-      <p>Enter a username and password to access the homepage</p>
+      <br />
+      <img src={logo} alt="efrei logo" className="img" />
+      <p>Please Log In</p>
+      <span>Entrer any username and password</span>
       <form onSubmit={handleSubmit} className="login-form">
         <label>
           <p>Username</p>
@@ -34,6 +39,7 @@ function Login({ setToken }) {
             type="text"
             onChange={(e) => setUserName(e.target.value)}
             className="username-input"
+            required
           />
         </label>
 
@@ -42,6 +48,7 @@ function Login({ setToken }) {
           <input
             type="password"
             onChange={(e) => setPassWord(e.target.value)}
+            required
             className="username-input"
           />
         </label>
